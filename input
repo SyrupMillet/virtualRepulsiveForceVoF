@@ -1,0 +1,38 @@
+# Parallelization
+Partition : 1 1 5
+
+# Mesh definition
+Lx : 0.006
+Ly : 0.006
+Lz : 0.010
+nx : 60 !128
+ny : 60 !128
+nz : 99 !128
+
+# Are we using a moving domain?
+Moving domain : .true.
+
+# Fluid properties
+Gravity :                     0 -9.81 0
+Liquid dynamic viscosity :    10.8e-3   ! M=848=>2.715, M=41.1=>1.273
+Gas dynamic viscosity :       1.780e-6
+Liquid density :              1153.8
+Gas density :                 1.226
+Surface tension coefficient : 6.77e-2
+
+# Bubble definition
+Bubble radius :   0.00159
+Bubble position1 : 0 0 -0.002
+Bubble position2 : 0 0 0.002
+
+# Time integration
+Max timestep size : 5e-5
+Max cfl number :    1
+Max time :          0.1
+
+# Pressure solver
+Pressure tolerance : 1e-4
+Pressure iteration : 100
+
+# Ensight output
+Ensight output period : 1e-3 
